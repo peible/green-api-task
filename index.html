@@ -9,12 +9,12 @@
 <body class="container mt-4">
     <div class="row">
         <div class="col-md-6">
-            <div class="mb-3">
+            <div class="mb-1">
                 <label for="idInstance" class="form-label">idInstance</label>
                 <input type="text" id="idInstance" class="form-control" placeholder="Enter idInstance">
             </div>
-            
-            <div class="mb-3">
+
+            <div class="mb-1">
                 <label for="apiTokenInstance" class="form-label">ApiTokenInstance</label>
                 <input type="text" id="apiTokenInstance" class="form-control" placeholder="Enter ApiTokenInstance">
             </div>
@@ -24,10 +24,12 @@
 
             <hr>
 
-            <div class="mb-3">
+            <div class="mb-1">
                 <input type="text" id="phoneNumber" class="form-control" placeholder="Enter Phone Number">
             </div>
+            <div class="mb-1">
             <textarea id="messageText" class="form-control mb-2" rows="3" placeholder="Enter Text"></textarea>
+            </div>
             <button class="btn btn-success w-100" onclick="sendMessage()">Send Message</button>
 
             <hr>
@@ -36,14 +38,14 @@
                 <input type="text" id="" class="form-control" placeholder="Enter Phone Number">
             </div>
             <div class="mb-1">
-            <input type="text" id="fileUrl" class="form-control" placeholder="Enter File URL">
+                <input type="text" id="fileUrl" class="form-control" placeholder="Enter File URL">
             </div>
-            <button class="btn btn-warning w-100" onclick="sendFileByUrl()">Send File</button>
+            <button class="btn btn-success w-100" onclick="sendFileByUrl()">Send File</button>
         </div>
 
         <div class="col-md-6">
-            <h4>Response:</h4>
-            <textarea id="response" class="form-control" rows="24" readonly></textarea>
+            <h6>Response:</h6>
+            <textarea id="response" class="form-control" rows="23" readonly></textarea>
         </div>
     </div>
     <script>
