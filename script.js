@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const idInstance = getInput("idInstance");
         const apiTokenInstance = getInput("apiTokenInstance");
 
-        if (!idInstance || !apiTokenInstance) return alert("Enter both idInstance and apiTokenInstance.");
+        if (!idInstance || !apiTokenInstance) return alert("⚠️ Enter both idInstance and apiTokenInstance.");
 
         try {
             const response = await fetch(`https://api.green-api.com/waInstance${idInstance}/${endpoint}/${apiTokenInstance}`, {
@@ -23,5 +23,5 @@ document.addEventListener("DOMContentLoaded", () => {
     window.getSettings = () => sendRequest("getSettings");
     window.getStateInstance = () => sendRequest("getStateInstance");
     window.sendMessage = () => sendRequest("sendMessage", "POST", { chatId: getInput("phoneNumber") + "@c.us", message: getInput("messageText") });
-    window.sendFileByUrl = () => sendRequest("sendFileByUrl", "POST", { chatId: getInput("phoneNumber") + "@c.us", urlFile: getInput("fileUrl"), fileName: getInput("fileUrl").split("/").pop(), caption: "Here is your file!" });
+    window.sendFileByUrl = () => sendRequest("sendFileByUrl", "POST", { chatId: getInput("phoneNumber") + "@c.us", urlFile: getInput("fileUrl"), fileName: getInput("fileUrl").split("/").pop(), caption: "📄 Here is your file!" });
 });
